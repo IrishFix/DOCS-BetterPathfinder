@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="plugin-moonwave plugin-id-moonwave">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="generator" content="Docusaurus v2.0.0-beta.21">
+<title data-rh="true">BetterPathfinder | DOCS-BetterPathfinder</title><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://master-ip.github.io/DOCS-BetterPathfinder/api/BetterPathfinder"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="BetterPathfinder | DOCS-BetterPathfinder"><meta data-rh="true" name="description" content="placeholder description"><meta data-rh="true" property="og:description" content="placeholder description"><link data-rh="true" rel="canonical" href="https://master-ip.github.io/DOCS-BetterPathfinder/api/BetterPathfinder"><link data-rh="true" rel="alternate" href="https://master-ip.github.io/DOCS-BetterPathfinder/api/BetterPathfinder" hreflang="en"><link data-rh="true" rel="alternate" href="https://master-ip.github.io/DOCS-BetterPathfinder/api/BetterPathfinder" hreflang="x-default"><link rel="stylesheet" href="/DOCS-BetterPathfinder/assets/css/styles.bc734c04.css">
+<link rel="preload" href="/DOCS-BetterPathfinder/assets/js/runtime~main.7d381c04.js" as="script">
+<link rel="preload" href="/DOCS-BetterPathfinder/assets/js/main.19cf8a71.js" as="script">
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
+<div role="region"><a href="#" class="skipToContent_fXgn">Skip to main content</a></div><nav class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Navigation bar toggle" class="navbar__toggle clean-btn" type="button" tabindex="0"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/DOCS-BetterPathfinder/"><b class="navbar__title text--truncate">DOCS-BetterPathfinder</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/DOCS-BetterPathfinder/api/">API</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/master-ip/DOCS-BetterPathfinder" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_lCJq"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="searchBox_ZlJk"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Press S to Search..." aria-label="Search" class="navbar__search-input search-bar"></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div class="main-wrapper docPageContainer_wNNk"><div class="docPage_Dpn1"><div class="docSidebarContainer_o_re"><div class="sidebar_njMd"><nav class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/DOCS-BetterPathfinder/api/BetterPathfinder">​Better​Pathfinder</a></li></ul></nav></div></div><main class="docMainContainer_HJE1"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_MU3C"><div class="docItemContainer_Wv98"><article><div class="member_J0w1 markdown"><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_oUs_"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><header><h1 class="docTitle_mZRt" style="text-decoration:none"><span style="display:inline-block">Better</span><span style="display:inline-block">Pathfinder</span></h1><div class="luaClassTags_EipM"></div><div>
+<p>placeholder description</p>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="types">Types<a class="hash-link" href="#types" title="Direct link to heading">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="t_WaypointAction"><code style="text-decoration:none">t_WaypointAction</code><a class="hash-link" href="#t_WaypointAction" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/master-ip/DOCS-BetterPathfinder/blob/master/lib/init.lua#L12"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">type</code> <code>t_WaypointAction<!-- --> = </code> <code class="purple_ieR2">{</code><div class="inset_uKQm"><code>None<!-- -->: </code><code class="blue_P4bS">&quot;n&quot;</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>Jump<!-- -->: </code><code class="blue_P4bS">&quot;j&quot;</code></div><code class="purple_ieR2">}</code></div><div></div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="i_State"><code style="text-decoration:none">i_State</code><a class="hash-link" href="#i_State" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/master-ip/DOCS-BetterPathfinder/blob/master/lib/init.lua#L21"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>i_State<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>Running<!-- -->: </code><code class="blue_P4bS">&quot;r&quot;</code><span class="inlineDescription_G7Er">-- <span>
+<p>A PathBody will enter this state if it is currently performing a pathfind operation.</p>
+</span></span></div><div><code>Idle<!-- -->: </code><code class="blue_P4bS">&quot;i&quot;</code><span class="inlineDescription_G7Er">-- <span>
+<p>A PathBody will enter this state if it is not currently performing any operation.</p>
+</span></span></div><div><code>Failed<!-- -->: </code><code class="blue_P4bS">&quot;f&quot;</code><span class="inlineDescription_G7Er">-- <span>
+<p>This state will be passed through the SolveEnded signal upon pathfind failure.</p>
+</span></span></div><div><code>Succeeded<!-- -->: </code><code class="blue_P4bS">&quot;s&quot;</code><span class="inlineDescription_G7Er">-- <span>
+<p>This state will be passed through the SolveEnded signal upon pathfind success.</p>
+</span></span></div><div><code>Cancelled<!-- -->: </code><code class="blue_P4bS">&quot;c&quot;</code><span class="inlineDescription_G7Er">-- <span>
+<p>This state will be passed through the SolveEnded signal upon pathfind cancellation.</p>
+</span></span></div></div><code>}</code></div><div></div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="properties">Properties<a class="hash-link" href="#properties" title="Direct link to heading">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="WaypointAction"><code style="text-decoration:none">WaypointAction</code><a class="hash-link" href="#WaypointAction" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/master-ip/DOCS-BetterPathfinder/blob/master/lib/init.lua#L43"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>BetterPathfinder<!-- -->.<!-- -->WaypointAction<!-- -->:<!-- --> </code> <code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/DOCS-BetterPathfinder/api/BetterPathfinder#t_WaypointAction">t_WaypointAction</a></code></div><div>
+<p>WaypointAction is an Enum-like table that stores the action types for the Waypoints generated by the pathfinder.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="State"><code style="text-decoration:none">State</code><a class="hash-link" href="#State" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/master-ip/DOCS-BetterPathfinder/blob/master/lib/init.lua#L52"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>BetterPathfinder<!-- -->.<!-- -->State<!-- -->:<!-- --> </code> <code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_State">i_State</a></code></div><div>
+<p>State is an Enum-like table that stores the state types that the <a href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_PathBody">BetterPathfinder.i_PathBody</a> may enter or pass through events upon certain operation milestones.</p>
+</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="CreatePathBody"><code style="text-decoration:none">CreatePathBody</code><a class="hash-link" href="#CreatePathBody" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/master-ip/DOCS-BetterPathfinder/blob/master/lib/init.lua#L89"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>BetterPathfinder<!-- -->:</code><code class="green_DgR4">CreatePathBody</code><code>(</code><div class="inset_uKQm"><div><code>PathBodyInfoTable<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_PathBodyInfoTable">i_PathBodyInfoTable</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>This is the PathBodyInfoTable that will influence this <a href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_PathBody">BetterPathfinder.i_PathBody</a> and all of its pathfinding operations.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_PathBody">i_PathBody</a></code></div><h3>Types</h3><h3 class="anchor anchorWithStickyNavbar_LWe7" id="i_PathBodyInfoTable"><a class="hash-link" href="#i_PathBodyInfoTable" title="Direct link to heading">​</a></h3><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>i_PathBodyInfoTable<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>AgentRadius<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>DEFAULT: 3; This is the radius at which the <a href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_PathBody">BetterPathfinder.i_PathBody</a> will ensure fits through all waypoints it makes.</p>
+</span></span></div><div><code>AgentHeight<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>DEFAULT: 6; This is the height at which the <a href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_PathBody">BetterPathfinder.i_PathBody</a> will ensure fits through all waypoints it makes.</p>
+</span></span></div><div><code>AgentCanJump<!-- -->: </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>DEFAULT: false; This decides whether the <a href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_PathBody">BetterPathfinder.i_PathBody</a> will create waypoints that require the agent to jump to get to.</p>
+</span></span></div><div><code>AgentJumpHeight<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>DEFAULT: 7.2; This is the height at which the <a href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_PathBody">BetterPathfinder.i_PathBody</a> will allow its jump waypoints to go upwards off of the ground.</p>
+</span></span></div><div><code>AgentJumpDistance<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>DEFAULT: 5; This is the distance at which the <a href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_PathBody">BetterPathfinder.i_PathBody</a> will allow its waypoints to go above no ground.</p>
+</span></span></div><div><code>WaypointSpacing<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>DEFAULT: 3; This is the spacing in studs at which the <a href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_PathBody">BetterPathfinder.i_PathBody</a> will distance its waypoints from eachother.</p>
+</span></span></div><div><code>IgnoreObjects<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>DEFAULT: {}; This is a table that will store all Instances you wish to ignore collision with during a pathfinding operation.</p>
+</span></span></div><div><code>Timeout<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>DEFAULT: 10; This is how long a pathfinding operation will run for until ending with failure.</p>
+</span></span></div><div><code>MaterialCosts<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/enum/Material" target="_blank" rel="noopener noreferrer">Material<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>]</code></span><code>: </code><code class="blue_P4bS">number</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>DEFAULT: {}; This is a table of which the key is a Material EnumItem, and the value is a number that indicates how costly it is to traverse across said Material surface.</p>
+</span></span></div><div><code>RegionCosts<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="yellow_QJap">{</code><div class="inset_uKQm"><code>CFrame<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/CFrame" target="_blank" rel="noopener noreferrer">CFrame<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="yellow_QJap">,</code></div><div class="inset_uKQm"><code>Size<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="yellow_QJap">,</code></div><div class="inset_uKQm"><code>Shape<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/enum/PartType" target="_blank" rel="noopener noreferrer">PartType<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><code class="yellow_QJap">}</code><code>]</code></span><code>: </code><code class="blue_P4bS">number</code><code class="purple_ieR2">}</code><code class="op_lSLc"> | </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>]</code></span><code>: </code><code class="blue_P4bS">number</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>DEFAULT: {}; This is a table of which the key is a Instance or a table with a "Size" (Vector3), "CFrame" (CFrame) and "Shape" (PartType EnumItem), and the value is a number that indicates how costly it is to traverse through the set area or part bounds.</p>
+</span></span></div></div><code>}</code></div><div></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="i_PathBody"><a class="hash-link" href="#i_PathBody" title="Direct link to heading">​</a></h3><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>i_PathBody<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>SolveEnded<!-- -->: </code><code class="blue_P4bS">FastSignal</code><span class="inlineDescription_G7Er">-- <span>
+<p>This signal will fire every time the PathBody finishes a pathfinding operation, passing through the State that it ended on.</p>
+</span></span></div><div><code>SolveBegan<!-- -->: </code><code class="blue_P4bS">FastSignal</code><span class="inlineDescription_G7Er">-- <span>
+<p>This signal will fire every time the PathBody begins a pathfinding operation.</p>
+</span></span></div><div><code>WaypointBlocked<!-- -->: </code><code class="blue_P4bS">FastSignal</code><span class="inlineDescription_G7Er">-- <span>
+<p>This signal will fire every time the PathBody detects a waypoint within its path has been blocked (Only fires if a pathfinding operation has been run and has succeeded).</p>
+</span></span></div><div><code>WaypointUnBlocked<!-- -->: </code><code class="blue_P4bS">FastSignal</code><span class="inlineDescription_G7Er">-- <span>
+<p>This signal will fire every time the PathBody detects a waypoint within its path that was blocked, has been unblocked (Only fires if a pathfinding operation has had a blocked waypoint).</p>
+</span></span></div><div><code>Visuals<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance?<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>This is a Folder that stores all of the visualisations of this PathBody's current path. (Will be nil unless <a href="/DOCS-BetterPathfinder/api/BetterPathfinder#VisualisePath">BetterPathfinder:VisualisePath</a> has been called at least once after a successful pathfinding operation.</p>
+</span></span></div></div><code>}</code></div><div></div><div>
+<p>This method generates a <a href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_PathBody">BetterPathfinder.i_PathBody</a> that will be used with the following methods in order to run all pathfinding operations.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SendAgentDownPath"><code style="text-decoration:none">SendAgentDownPath</code><a class="hash-link" href="#SendAgentDownPath" title="Direct link to heading">​</a></h3><span class="badge_Ba2I" style="color:#f1c40f"><span class="badgeTooltip_cWXP">This is a yielding function. When called, it will pause the Lua thread that called the function until a result is ready to be returned, without interrupting other scripts.</span><span class="badgeToolTipTail_H9D_"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#f1c40f" role="img" aria-label="This is a yielding function. When called, it will pause the Lua thread that called the function until a result is ready to be returned, without interrupting other scripts."><path d="M96.4 11.9c-1.4-2.5-4-4-6.9-4H10.8c-2.9 0-5.4 1.5-6.9 4-1.4 2.5-1.4 5.5 0 7.9L43.3 88c1.4 2.5 4 4 6.9 4 2.9 0 5.4-1.5 6.9-4l39.3-68.2c1.4-2.4 1.4-5.4 0-7.9zM46.3 54.5c1.1-1.1 2.3-1.6 3.8-1.6s2.8.5 3.8 1.6c1.1 1.1 1.6 2.3 1.6 3.8s-.5 2.8-1.6 3.8c-1.1 1.1-2.3 1.6-3.8 1.6s-2.8-.5-3.8-1.6c-1.1-1.1-1.6-2.3-1.6-3.8.1-1.5.6-2.8 1.6-3.8zm-.5-4.9V21.8h8.8v27.8h-8.8z"></path></svg> <!-- -->Yields</span></span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/master-ip/DOCS-BetterPathfinder/blob/master/lib/init.lua#L133"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>BetterPathfinder<!-- -->:</code><code class="green_DgR4">SendAgentDownPath</code><code>(</code><code>AgentModel<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Model" target="_blank" rel="noopener noreferrer">Model<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Moves the agent passed in down the waypoints created by the last pathfinding operation.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="IntersectAgentDownPath"><code style="text-decoration:none">IntersectAgentDownPath</code><a class="hash-link" href="#IntersectAgentDownPath" title="Direct link to heading">​</a></h3><span class="badge_Ba2I" style="color:#f1c40f"><span class="badgeTooltip_cWXP">This is a yielding function. When called, it will pause the Lua thread that called the function until a result is ready to be returned, without interrupting other scripts.</span><span class="badgeToolTipTail_H9D_"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#f1c40f" role="img" aria-label="This is a yielding function. When called, it will pause the Lua thread that called the function until a result is ready to be returned, without interrupting other scripts."><path d="M96.4 11.9c-1.4-2.5-4-4-6.9-4H10.8c-2.9 0-5.4 1.5-6.9 4-1.4 2.5-1.4 5.5 0 7.9L43.3 88c1.4 2.5 4 4 6.9 4 2.9 0 5.4-1.5 6.9-4l39.3-68.2c1.4-2.4 1.4-5.4 0-7.9zM46.3 54.5c1.1-1.1 2.3-1.6 3.8-1.6s2.8.5 3.8 1.6c1.1 1.1 1.6 2.3 1.6 3.8s-.5 2.8-1.6 3.8c-1.1 1.1-2.3 1.6-3.8 1.6s-2.8-.5-3.8-1.6c-1.1-1.1-1.6-2.3-1.6-3.8.1-1.5.6-2.8 1.6-3.8zm-.5-4.9V21.8h8.8v27.8h-8.8z"></path></svg> <!-- -->Yields</span></span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/master-ip/DOCS-BetterPathfinder/blob/master/lib/init.lua#L163"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>BetterPathfinder<!-- -->:</code><code class="green_DgR4">IntersectAgentDownPath</code><code>(</code><code>AgentModel<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Model" target="_blank" rel="noopener noreferrer">Model<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Moves the agent passed in down the waypoints created by the last pathfinding operation; starting at the nearest point to the agent.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Cancel"><code style="text-decoration:none">Cancel</code><a class="hash-link" href="#Cancel" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/master-ip/DOCS-BetterPathfinder/blob/master/lib/init.lua#L188"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>BetterPathfinder<!-- -->:</code><code class="green_DgR4">Cancel</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Cancels the currently running pathfind operation (if there is one).</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetWaypoints"><code style="text-decoration:none">GetWaypoints</code><a class="hash-link" href="#GetWaypoints" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/master-ip/DOCS-BetterPathfinder/blob/master/lib/init.lua#L198"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>BetterPathfinder<!-- -->:</code><code class="green_DgR4">GetWaypoints</code><code>(</code><code>) → </code><code class="purple_ieR2">{</code><code class="blue_P4bS">Waypoint</code><code class="purple_ieR2">}</code></div><div>
+<p>Returns an ordered table of the waypoints created in the last pathfinding operation to be used in a custom method.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="VisualisePath"><code style="text-decoration:none">VisualisePath</code><a class="hash-link" href="#VisualisePath" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/master-ip/DOCS-BetterPathfinder/blob/master/lib/init.lua#L207"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>BetterPathfinder<!-- -->:</code><code class="green_DgR4">VisualisePath</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Generates a visualisation for all the waypoints generated in the most recent pathfinding operation.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="DeVisualisePath"><code style="text-decoration:none">DeVisualisePath</code><a class="hash-link" href="#DeVisualisePath" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/master-ip/DOCS-BetterPathfinder/blob/master/lib/init.lua#L248"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>BetterPathfinder<!-- -->:</code><code class="green_DgR4">DeVisualisePath</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Clears all of the currently visualised waypoints.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SolveAsync"><code style="text-decoration:none">SolveAsync</code><a class="hash-link" href="#SolveAsync" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/master-ip/DOCS-BetterPathfinder/blob/master/lib/init.lua#L263"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>BetterPathfinder<!-- -->:</code><code class="green_DgR4">SolveAsync</code><code>(</code><div class="inset_uKQm"><div><code>PathingFrom<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The position that the <a href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_PathBody">BetterPathfinder.i_PathBody</a> will use in the pathfinding operation as the start point.</p>
+</span></span></div><div><code>PathingTo<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The position that the <a href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_PathBody">BetterPathfinder.i_PathBody</a> will use in the pathfinding operation as the goal point.</p>
+</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>This is the method that can be called on a <a href="/DOCS-BetterPathfinder/api/BetterPathfinder#i_PathBody">BetterPathfinder.i_PathBody</a> in order to initialise a pathfinding operation.</p>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;CreatePathBody&quot;,
+            &quot;desc&quot;: &quot;This method generates a [BetterPathfinder.i_PathBody] that will be used with the following methods in order to run all pathfinding operations.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;PathBodyInfoTable&quot;,
+                    &quot;desc&quot;: &quot;This is the PathBodyInfoTable that will influence this [BetterPathfinder.i_PathBody] and all of its pathfinding operations.&quot;,
+                    &quot;lua_type&quot;: &quot;i_PathBodyInfoTable&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;i_PathBody&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 89,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;SendAgentDownPath&quot;,
+            &quot;desc&quot;: &quot;Moves the agent passed in down the waypoints created by the last pathfinding operation.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;AgentModel&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Model&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;yields&quot;: true,
+            &quot;source&quot;: {
+                &quot;line&quot;: 133,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;IntersectAgentDownPath&quot;,
+            &quot;desc&quot;: &quot;Moves the agent passed in down the waypoints created by the last pathfinding operation; starting at the nearest point to the agent.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;AgentModel&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Model&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;yields&quot;: true,
+            &quot;source&quot;: {
+                &quot;line&quot;: 163,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Cancel&quot;,
+            &quot;desc&quot;: &quot;Cancels the currently running pathfind operation (if there is one).&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 188,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;GetWaypoints&quot;,
+            &quot;desc&quot;: &quot;Returns an ordered table of the waypoints created in the last pathfinding operation to be used in a custom method.&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;{Waypoint}&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 198,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;VisualisePath&quot;,
+            &quot;desc&quot;: &quot;Generates a visualisation for all the waypoints generated in the most recent pathfinding operation.&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 207,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;DeVisualisePath&quot;,
+            &quot;desc&quot;: &quot;Clears all of the currently visualised waypoints.&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 248,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;SolveAsync&quot;,
+            &quot;desc&quot;: &quot;This is the method that can be called on a [BetterPathfinder.i_PathBody] in order to initialise a pathfinding operation. &quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;PathingFrom&quot;,
+                    &quot;desc&quot;: &quot;The position that the [BetterPathfinder.i_PathBody] will use in the pathfinding operation as the start point.&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;PathingTo&quot;,
+                    &quot;desc&quot;: &quot;The position that the [BetterPathfinder.i_PathBody] will use in the pathfinding operation as the goal point.&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 263,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        }
+    ],
+    &quot;properties&quot;: [
+        {
+            &quot;name&quot;: &quot;WaypointAction&quot;,
+            &quot;desc&quot;: &quot;WaypointAction is an Enum-like table that stores the action types for the Waypoints generated by the pathfinder.&quot;,
+            &quot;lua_type&quot;: &quot;t_WaypointAction&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 43,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;State&quot;,
+            &quot;desc&quot;: &quot;State is an Enum-like table that stores the state types that the [BetterPathfinder.i_PathBody] may enter or pass through events upon certain operation milestones.&quot;,
+            &quot;lua_type&quot;: &quot;i_State&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 52,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        }
+    ],
+    &quot;types&quot;: [
+        {
+            &quot;name&quot;: &quot;t_WaypointAction&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;lua_type&quot;: &quot;{None: \&quot;n\&quot;, Jump: \&quot;j\&quot;}&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 12,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;i_State&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;Running&quot;,
+                    &quot;lua_type&quot;: &quot;\&quot;r\&quot;&quot;,
+                    &quot;desc&quot;: &quot;A PathBody will enter this state if it is currently performing a pathfind operation.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Idle&quot;,
+                    &quot;lua_type&quot;: &quot;\&quot;i\&quot;&quot;,
+                    &quot;desc&quot;: &quot;A PathBody will enter this state if it is not currently performing any operation.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Failed&quot;,
+                    &quot;lua_type&quot;: &quot;\&quot;f\&quot;&quot;,
+                    &quot;desc&quot;: &quot;This state will be passed through the SolveEnded signal upon pathfind failure.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Succeeded&quot;,
+                    &quot;lua_type&quot;: &quot;\&quot;s\&quot;&quot;,
+                    &quot;desc&quot;: &quot;This state will be passed through the SolveEnded signal upon pathfind success.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Cancelled&quot;,
+                    &quot;lua_type&quot;: &quot;\&quot;c\&quot;&quot;,
+                    &quot;desc&quot;: &quot;This state will be passed through the SolveEnded signal upon pathfind cancellation.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 21,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;i_PathBodyInfoTable&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;AgentRadius&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;DEFAULT: 3; This is the radius at which the [BetterPathfinder.i_PathBody] will ensure fits through all waypoints it makes.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;AgentHeight&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;DEFAULT: 6; This is the height at which the [BetterPathfinder.i_PathBody] will ensure fits through all waypoints it makes.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;AgentCanJump&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;,
+                    &quot;desc&quot;: &quot;DEFAULT: false; This decides whether the [BetterPathfinder.i_PathBody] will create waypoints that require the agent to jump to get to.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;AgentJumpHeight&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;DEFAULT: 7.2; This is the height at which the [BetterPathfinder.i_PathBody] will allow its jump waypoints to go upwards off of the ground.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;AgentJumpDistance&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;DEFAULT: 5; This is the distance at which the [BetterPathfinder.i_PathBody] will allow its waypoints to go above no ground.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;WaypointSpacing&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;DEFAULT: 3; This is the spacing in studs at which the [BetterPathfinder.i_PathBody] will distance its waypoints from eachother.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;IgnoreObjects&quot;,
+                    &quot;lua_type&quot;: &quot;{Instance}&quot;,
+                    &quot;desc&quot;: &quot;DEFAULT: {}; This is a table that will store all Instances you wish to ignore collision with during a pathfinding operation.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Timeout&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;DEFAULT: 10; This is how long a pathfinding operation will run for until ending with failure.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;MaterialCosts&quot;,
+                    &quot;lua_type&quot;: &quot;{[Material]: number}&quot;,
+                    &quot;desc&quot;: &quot;DEFAULT: {}; This is a table of which the key is a Material EnumItem, and the value is a number that indicates how costly it is to traverse across said Material surface.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;RegionCosts&quot;,
+                    &quot;lua_type&quot;: &quot;{[{CFrame: CFrame, Size: Vector3, Shape: PartType}]: number} | {[Instance]: number}&quot;,
+                    &quot;desc&quot;: &quot;DEFAULT: {}; This is a table of which the key is a Instance or a table with a \&quot;Size\&quot; (Vector3), \&quot;CFrame\&quot; (CFrame) and \&quot;Shape\&quot; (PartType EnumItem), and the value is a number that indicates how costly it is to traverse through the set area or part bounds.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 35,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;i_PathBody&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;SolveEnded&quot;,
+                    &quot;lua_type&quot;: &quot;FastSignal&quot;,
+                    &quot;desc&quot;: &quot;This signal will fire every time the PathBody finishes a pathfinding operation, passing through the State that it ended on.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;SolveBegan&quot;,
+                    &quot;lua_type&quot;: &quot;FastSignal&quot;,
+                    &quot;desc&quot;: &quot;This signal will fire every time the PathBody begins a pathfinding operation.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;WaypointBlocked&quot;,
+                    &quot;lua_type&quot;: &quot;FastSignal&quot;,
+                    &quot;desc&quot;: &quot;This signal will fire every time the PathBody detects a waypoint within its path has been blocked (Only fires if a pathfinding operation has been run and has succeeded).&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;WaypointUnBlocked&quot;,
+                    &quot;lua_type&quot;: &quot;FastSignal&quot;,
+                    &quot;desc&quot;: &quot;This signal will fire every time the PathBody detects a waypoint within its path that was blocked, has been unblocked (Only fires if a pathfinding operation has had a blocked waypoint).&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Visuals&quot;,
+                    &quot;lua_type&quot;: &quot;Instance?&quot;,
+                    &quot;desc&quot;: &quot;This is a Folder that stores all of the visualisations of this PathBody&#x27;s current path. (Will be nil unless [BetterPathfinder:VisualisePath] has been called at least once after a successful pathfinding operation.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 99,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        }
+    ],
+    &quot;name&quot;: &quot;BetterPathfinder&quot;,
+    &quot;desc&quot;: &quot;placeholder description&quot;,
+    &quot;source&quot;: {
+        &quot;line&quot;: 8,
+        &quot;path&quot;: &quot;lib/init.lua&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#i_PathBody" class="table-of-contents__link toc-highlight">i_PathBody</a></li><li><a href="#i_PathBodyInfoTable" class="table-of-contents__link toc-highlight">i_PathBodyInfoTable</a></li><li><a href="#i_State" class="table-of-contents__link toc-highlight">i_State</a></li><li><a href="#t_WaypointAction" class="table-of-contents__link toc-highlight">t_WaypointAction</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#State" class="table-of-contents__link toc-highlight">State</a></li><li><a href="#WaypointAction" class="table-of-contents__link toc-highlight">WaypointAction</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#Cancel" class="table-of-contents__link toc-highlight">:Cancel</a></li><li><a href="#CreatePathBody" class="table-of-contents__link toc-highlight">:CreatePathBody</a></li><li><a href="#DeVisualisePath" class="table-of-contents__link toc-highlight">:DeVisualisePath</a></li><li><a href="#GetWaypoints" class="table-of-contents__link toc-highlight">:GetWaypoints</a></li><li><a href="#IntersectAgentDownPath" class="table-of-contents__link toc-highlight">:IntersectAgentDownPath</a></li><li><a href="#SendAgentDownPath" class="table-of-contents__link toc-highlight">:SendAgentDownPath</a></li><li><a href="#SolveAsync" class="table-of-contents__link toc-highlight">:SolveAsync</a></li><li><a href="#VisualisePath" class="table-of-contents__link toc-highlight">:VisualisePath</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 master-ip. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+<script src="/DOCS-BetterPathfinder/assets/js/runtime~main.7d381c04.js"></script>
+<script src="/DOCS-BetterPathfinder/assets/js/main.19cf8a71.js"></script>
+</body>
+</html>

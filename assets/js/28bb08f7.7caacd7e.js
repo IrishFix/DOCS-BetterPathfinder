@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[378],{63891:e=>{e.exports=JSON.parse('{"sourceUrl":"https://github.com/master-ip/DOCS-BetterPathfinder/blob/master","baseUrl":"/DOCS-BetterPathfinder/","classOrder":[],"apiCategories":[]}')}}]);
